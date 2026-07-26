@@ -1,0 +1,40 @@
+#this is the user-input type 
+class student:
+   def __init__(student):
+      student.name = input("Enter your Name:")
+      student.dept = input("Enter your Department:")
+      student.course = input("Enter the course or in which year u are  : ")
+class Subjects:
+    def __init__(subject):
+      subject.name = input("Enter the subject Name : ")
+      subject.code = input("Enter the subject code : ")
+      subject.total_lec_conducted = int(input("Enter number of total lectures conducted : "))
+class lectures:
+    def __init__(lecture):
+      lecture.month = input("Enter the month : ")
+class attendancee:
+    def __init__(attendance):
+      attendance.attended = int(input("Enter the number of lectures attended : "))
+    def cpercentage(self, subject):
+      percentage = (self.attended / subject.total_lec_conducted) * 100
+      return percentage
+    def display(self, student, subject, lecture):
+       print("Student Name :",student.name)
+       print("Depratment :", student.dept)
+       print("Course taken :", student.course)
+       print("Subjects name :", subject.name)
+       print("Subject code :", subject.code)
+       print("Enter the Month in which lecture is conducted : ", lecture.month)
+       print("Enter total lecture conducted :", subject.total_lec_conducted)
+       print("Enter the lectures attended : ", self.attended)
+a = student()
+b = Subjects()
+c = lectures()
+d = attendancee()
+d.display(a,b,c)
+result = d.cpercentage(b)
+print(f"Attendace in {c.month} :", result)
+if result > 75:
+    print("Safe Zone")
+elif result < 75:
+    print("Attend lectures")
